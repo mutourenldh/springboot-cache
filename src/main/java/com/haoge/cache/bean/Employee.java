@@ -1,28 +1,23 @@
 package com.haoge.cache.bean;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String lastName;
 	private String email;
 	private Integer gender; //性别 1男  0女
 	private Integer dId;
 	
-	
 	public Employee() {
 		super();
 	}
 
-	
-	public Employee(Integer id, String lastName, String email, Integer gender, Integer dId) {
-		super();
-		this.id = id;
-		this.lastName = lastName;
-		this.email = email;
-		this.gender = gender;
-		this.dId = dId;
-	}
-	
 	public Integer getId() {
 		return id;
 	}
@@ -58,7 +53,5 @@ public class Employee {
 		return "Employee [id=" + id + ", lastName=" + lastName + ", email=" + email + ", gender=" + gender + ", dId="
 				+ dId + "]";
 	}
-	
-	
 
 }

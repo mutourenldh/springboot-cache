@@ -1,6 +1,19 @@
 spring:
+#配置redis的主机地址
+  redis:
+    host: 47.105.103.45
   datasource:
     url:  jdbc:mysql://47.105.103.45:3306/mybatis
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+
+#配置开启驼峰命名法
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+#设置日志级别，使他打印sql语句
+logging:
+  level:
+    com.haoge.cache.mapper: debug 
+#debug: true
